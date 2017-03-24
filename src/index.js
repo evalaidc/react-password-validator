@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Form from './App';
 import './index.css';
+import './App.css'
+
+const form ={
+  email: "evaster@yahoo.com",
+  password: "asdfjkl",
+  confirmpw: "asdfjkl;"
+}
 
 ReactDOM.render(
-  <App />,
+  <Form />,
   document.getElementById('root')
 );
