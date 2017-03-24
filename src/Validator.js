@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Validator.css";
 
 class Validator extends Component {
+// allows us to access and make parameters
   constructor(props){
     super()
     this.state={
@@ -10,28 +11,36 @@ class Validator extends Component {
       confirmpw: ''    }
   };
 
+// receives input values for email
     handleEmail(event){
+      // sets the email state to the constructor above
       this.setState({
         email: event.target.value
       });
     };
-
+// receives input values from the form for password
     handlePassword(event){
+      // sets the password state to the constructor above
       this.setState({
         password: event.target.value
       });
     };
-
+// receives input values from the form for confirmpw
     handleConfirmpw(event){
+      // sets the confirmpw state to the constructor above
       this.setState({
         confirmpw: event.target.value
       });
     };
 
+// what happens when submit is clicked
     handleSubmit(event){
+      // restricts email to include an @ symbol
       if(this.state.email.includes("@")){
+        // prevents user from submitting form without filling in all fields
         if(this.state.email && this.state.password && this.state.confirmpw){
         event.preventDefault();
+        // prevents password and confirmation password from being different.
           if(this.state.password === this.state.confirmpw){
             alert("Signed up successfully");
           } else {
