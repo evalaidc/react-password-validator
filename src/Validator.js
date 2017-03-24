@@ -12,15 +12,39 @@ class Validator extends Component {
     };
   };
 
+    handleEmail(event){
+      console.log("hello")
+      this.setState({
+        email: event.target.value
+      });
+    };
+
+    handlePassword(event){
+      this.setState({
+        password: event.target.value
+      });
+    };
+
+    handleConfirmpw(event){
+      this.setState({
+        confirmpw: event.target.value
+      });
+    };
+
+    handleSubmit(event){
+      this.setState({
+
+      })
+    }
 
   render() {
     return (
       <div className="form">
         <h1>Sign Up</h1>
-        <form>
-        <input type="text" placeholder="email" value={this.state.email} />
-        <input type="password" placeholder="password" value={this.state.password}/>
-        <input type="password" placeholder="confirm password" value={this.state.confirmpw} />
+        <form onSubmit= {this.handleSubmit}>
+        <input type="text" placeholder="email" onChange={this.handleEmail} />
+        <input type="password" placeholder="password"  />
+        <input type="password" placeholder="confirm password" />
         <input type="submit" value="Submit" />
         </form>
       </div>
