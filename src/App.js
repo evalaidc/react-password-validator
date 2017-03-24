@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import Validator from './Validator';
 import './App.css';
 
-const form = {
 
-}
-
-
-class Form extends Component {
+class App extends Component {
   render() {
     return (
       <Validator />
@@ -15,4 +11,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default App;
